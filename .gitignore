@@ -1,0 +1,10 @@
+data/raw/
+.Rhistory
+.Rproj.user
+.RData
+.Ruserdata
+renv/
+data/raw/
+models/
+reports/figures/
+.ipynb_checkpoints/

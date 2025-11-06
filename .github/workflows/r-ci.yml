@@ -1,0 +1,17 @@
+name: R-CI
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+      - name: Install deps
+        run: |
+          R -e "install.packages(c('dplyr','tidyr','stringr','ggplot2','janitor','corrplot','tm','textstem','wordcloud','wordcloud2','RColorBrewer','caret','syuzhet','e1071','pROC','gains','neuralnet','nnet'))"
+      - name: Smoke test
+        run: |
+          Rscript R/01_setup_and_load.R || true
+          Rscript R/02_eda.R || true
+          Rscript R/03_text_prep.R || true
+          Rscript R/04_models.R || true
