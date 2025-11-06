@@ -20,3 +20,14 @@ models/
 reports/figures/
 .ipynb_checkpoints/
 data/fake_job_postings.csv
+data/raw/
+data/*.csv
+*.DS_Store
+.Rhistory
+.Rproj.user
+.RData
+.Ruserdata
+renv/
+models/
+reports/figures/
+.ipynb_checkpoints/
