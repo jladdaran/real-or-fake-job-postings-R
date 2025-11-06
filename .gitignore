@@ -19,3 +19,4 @@ renv/
 models/
 reports/figures/
 .ipynb_checkpoints/
+data/fake_job_postings.csv
